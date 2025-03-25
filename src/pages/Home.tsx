@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Search, Home, Info, MapPin, Star, Github, Linkedin, Mail } from 'lucide-react';
 import { communityInfo, serviceProviders } from '../data/communityData';
 
+import bgImage from "../assets/111.png";
+
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
@@ -27,16 +29,18 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div 
-        className="bg-blue-600 text-white py-20"
-        style={{
-          backgroundImage: 'url("../assets/11.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay',
-          backgroundColor: 'rgba(37, 99, 235, 0.8)'
-        }}
-      >
+     <div 
+  className="bg-blue-600 text-white py-20"
+  style={{
+    backgroundImage: `url(${bgImage})`,
+    backgroundSize: '80%', // Zoom out by reducing size
+    backgroundPosition: 'right center', // Keep the image on the right
+    backgroundRepeat: 'no-repeat', // Prevent tiling
+    backgroundBlendMode: 'overlay',
+    backgroundColor: 'rgba(37, 99, 235, 0.8)'
+  }}
+>
+
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
