@@ -1,6 +1,7 @@
 import { Trash2, Calendar, Phone, Wrench, Zap, Paintbrush, Hammer, Trees as Tree, Car, Heart, ShowerHead, Laptop } from 'lucide-react';
 
 export interface CommunityInfo {
+  pdf: any;
   id: number;
   title: string;
   category: string;
@@ -25,9 +26,10 @@ export const communityInfo: CommunityInfo[] = [
     title: 'Trash Collection',
     category: 'Services',
     keywords: ['trash', 'garbage', 'waste', 'collection'],
-    content: 'Trash pickup occurs every Tuesday morning. Please have bins out by 7 AM.',
+    content: 'Trash pickup occurs every Tuesday morning. Please have bins out by 7 AM. And Recycling is collected every other Tuesday. Last Updated Jan 2025',
     icon: Trash2,
-    description: 'Detailed information about our community waste management services, including recycling guidelines and special pickup requests.'
+    description: 'Detailed information about our community waste management services, including recycling guidelines and special pickup requests.',
+    pdf: undefined
   },
   {
     id: 2,
@@ -36,7 +38,8 @@ export const communityInfo: CommunityInfo[] = [
     keywords: ['events', 'activities', 'calendar', 'schedule'],
     content: 'Check our calendar for upcoming community events and activities.',
     icon: Calendar,
-    description: 'Full calendar of community events, including festivals, meetings, and recreational activities.'
+    description: 'Full calendar of community events, including festivals, meetings, and recreational activities.',
+    pdf: undefined
   },
   {
     id: 3,
@@ -45,7 +48,8 @@ export const communityInfo: CommunityInfo[] = [
     keywords: ['emergency', 'contact', 'phone', 'numbers'],
     content: 'Emergency: 911\nPolice (non-emergency): 555-0123\nFire Department: 555-0124',
     icon: Phone,
-    description: 'Complete list of emergency and non-emergency contact numbers for community services.'
+    description: 'Complete list of emergency and non-emergency contact numbers for community services.',
+    pdf: undefined
   }
 ];
 

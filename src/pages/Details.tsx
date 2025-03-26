@@ -1,11 +1,12 @@
-import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { communityInfo } from '../data/communityData';
+import SamplePdf from '../assets/trashpickupcalender.pdf';
 
 function Details() {
   const { id } = useParams();
   const navigate = useNavigate();
+
   const info = communityInfo.find(item => item.id === Number(id));
 
   if (!info) {
@@ -58,6 +59,14 @@ function Details() {
               <div className="mt-8 p-6 bg-gray-50 rounded-lg">
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">Additional Information</h2>
                 <p className="text-gray-600">{info.description}</p>
+                <a
+                      href={SamplePdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 mt-4 inline-block"
+                >
+                  Download PDF
+                </a>
               </div>
             )}
           </div>
